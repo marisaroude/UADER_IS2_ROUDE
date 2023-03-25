@@ -1,37 +1,40 @@
 import sys
 
 class Factorial:
-    def __init__(self, min, max):
-        self.min = min
-        self.max = max
+    def __init__(self):
+        pass
 
-    
-    def run(self,num):
-        if num < 0: 
-            print("Factorial de un numero negativo no existe")
-        elif num == 0: 
-            return 1        
+    def calcular_factorial(self,num):
+        if num < 0 : 
+            print("Factorial de un nÃºmero negativo no existe")
+
+        elif num == 0 : 
+            return 1
+        
         else: 
-            while (num < self.min or num > self.max):
-                num = int(input(f"Debe ingresar un número dentro del rango: [{self.min},{self.max}]: ")) 
-            else: 
-                while (num >= self.min and num <= self.max): # Modifia el rango 
-                    fact = 1
-                    while(num >= self.max): 
-                        fact *= num 
-                        num -= 1
-                    return fact
+            fact = 1
+            while(num > 1 ): 
+                fact *= num
+                num -= 1
+            return fact
+
+
+    def run(self,min,max):
+        for i in range (min,max+1):
+            print("Factorial del nro",i, " es: ", self.calcular_factorial(i))
 
 
 
 #Creamos una instancia:
-f = Factorial(2,5)
+f = Factorial()
 
 if len(sys.argv) == 1: ##Esto quiere decir que no se ingreso un numero, acto seguido se solicita x consola el ingreso
-        num = int(input(f"Deebe ingresar un número dentro del rango")) 
+        min = int(input("Ingrese el valor mínimo: "))
+        max = int(input("Ingrese el valor máximo: ")) 
 else: 
-        num = int(sys.argv[1])  
+        min = int(sys.argv[1])
+        max = int(sys.argv[2]) 
      #sys.exit()
 
 #Llamamos al metodo:
-print("Factorial del nro",num, " es: ", f.run(num)) 
+f.run(min,max)
