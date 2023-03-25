@@ -26,6 +26,6 @@ else:
     min = int(sys.argv[1])
    #sys.exit()
 
-
+#El for realiza los factoriales para cada número del rango definido.
 for i in range (min,60+1):
     print("Factorial del nro",i, " es: ", factorial(i))
