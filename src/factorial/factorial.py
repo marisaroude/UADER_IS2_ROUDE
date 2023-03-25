@@ -3,8 +3,7 @@
 #* Creative commons                                                        *
 #*-------------------------------------------------------------------------*
 import sys
-valor_desde = 4
-valor_hasta = 6
+
 
 import sys
 
@@ -24,13 +23,11 @@ def factorial(num):
 
 
 if len(sys.argv) == 1:
-   min = int(input("Debe ingresar el numero minimo del rango: ")) 
    max = int(input("Debe ingresar el numero maximo del rango: ")) 
 else:
-    min = int(sys.argv[1])
-    max = int(sys.argv[2])
+    max = int(sys.argv[1])
    #sys.exit()
 
 
-for i in range (min,max+1):
+for i in range (1,max+1):
     print("Factorial del nro",i, " es: ", factorial(i))
