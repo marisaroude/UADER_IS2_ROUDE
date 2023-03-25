@@ -1,11 +1,3 @@
-#* calcula el factorial de un nÃºmero                                       *
-#* Dr.P.E.Colla (c) 2022                                                   *
-#* Creative commons                                                        *
-#*-------------------------------------------------------------------------*
-import sys
-valor_desde = 4
-valor_hasta = 6
-
 import sys
 
 def factorial(num): 
