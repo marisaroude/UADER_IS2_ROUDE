@@ -19,9 +19,9 @@ Seguí los siguientes comandos:
 
 Cree las carpetas desde la consola:
 1. bin
-2. bash
+2. script
 3. doc 
-4. script
+4. src
 
 ### **Punto 3:**
 
